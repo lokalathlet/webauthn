@@ -1,7 +1,6 @@
 name: webauthn
 description: A plugin implementing the WebAuthn authenticator model for generating Public Key Credentials
 version: 0.0.5+1
-homepage:
 repository: https://github.com/flutter-institute/webauthn
 issue_tracker: https://github.com/flutter-institute/webauthn/issues
 platforms:
@@ -30,7 +29,7 @@ dependencies:
   local_auth_android: ^1.0.13
   local_auth_ios: ^1.0.10
   local_auth_windows: ^1.0.4
-  logger: ^1.1.0
+  logger: ^2.0.1
   path: ^1.8.2
   path_provider: ^2.0.11
   precis: ^0.0.3

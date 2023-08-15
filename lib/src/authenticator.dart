@@ -144,7 +144,7 @@ class Authenticator {
       credentialSource = await _credentialSafe.generateCredential(
           options.rpEntity.id, options.userEntity.id, options.userEntity.name);
     } on Exception catch (e) {
-      _logger.w('Couldn\'t generate credential', e);
+      _logger.e('Couldn\'t generate credential', error : e);
       throw CredentialCreationException('Couldn\'t generate credential');
     }
 
@@ -463,7 +463,7 @@ class Authenticator {
           privateKey: privateKey, signer: signer);
     } catch (e) {
       // Step 12: Throw if any errors occured while generating the assertion signature
-      _logger.e('Exception occured while generating assertion', e);
+      _logger.e('Exception occured while generating assertion', error : e);
       throw GetAssertionException(
           'Exception occured while generating assertion');
     }
